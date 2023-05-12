@@ -3,7 +3,7 @@
 @section('title', 'Home page')
 
 @section('content')
-<h3 class="m-3">Questi sono gli unici 2 treni in partezza oggi!</h3>
+<h3 class="m-3">Questi sono gli unici treni in partezza oggi!</h3>
 @foreach ($trains as $train)
 <div class="col-3">
     <div class="card m-3">

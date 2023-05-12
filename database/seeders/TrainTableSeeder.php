@@ -17,13 +17,13 @@ class TrainTableSeeder extends Seeder
     public function run(Faker $faker)
     {
 
-        for ($i=0; $i<500; $i++) {
+        for ($i=0; $i<5; $i++) {
 
             $train = new Train();
             $train->Azienda = $faker->word();
             $train->Stazione_di_partenza = $faker->city();
             $train->Stazione_di_arrivo = $faker->city();
-            $train->Orario_di_partenza = $faker->date();
+            $train->Orario_di_partenza = $faker->date('2023-05-12');
             $train->Orario_di_arrivo = $faker->date();
             $train->Codice_treno = $faker->bothify('###??');;
             $train->Numero_carrozze = $faker->randomDigitNotNull();
