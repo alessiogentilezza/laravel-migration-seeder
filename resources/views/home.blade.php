@@ -6,7 +6,7 @@
 
     <h3 class="m-3">Questi sono gli unici @foreach ($trainsToday as $train)
             {{ $train->train_count }}
-        @endforeach treni in partezza oggi
+        @endforeach treni in partenza oggi
         dei {{ $trainsNumber }} in programma!</h3>
     @foreach ($trains as $train)
         <div class="col-3">
