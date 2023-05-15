@@ -4,12 +4,14 @@
 
 @section('content')
 
-    <h3 class="m-3">Questi sono gli unici @foreach ($trainsToday as $train)
+    <h3 class="m-3">Questi sono gli unici
+        @foreach ($trainsSelect as $train)
             <span class="text-danger">{{ $train->train_count }}</span>
         @endforeach treni in partenza oggi
-        dei <span class="text-danger">{{ $trainsNumber }}</span> in programma!</h3>
+        dei <span class="text-danger">{{ $trainsNumber }}</span> in programma!
+    </h3>
 
-    <div class="d-flex">
+    <div class="container d-flex flex-wrap">
         @foreach ($trains as $train)
             <div class="col-3">
                 <div class="card m-3">
@@ -29,6 +31,7 @@
                 </div>
             </div>
         @endforeach
+
     </div>
 
 @endsection
