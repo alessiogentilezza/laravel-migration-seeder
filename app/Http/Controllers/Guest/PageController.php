@@ -15,12 +15,14 @@ class PageController extends Controller
         //$trains = Train::all();
 
 
-        $trains = Train::where('Orario_di_partenza', 'like', '2023-05-12%')->get();
+        // $trains = Train::where('Orario_di_partenza', 'like', '2023-05-12%')->get();
+
+        $trains = Train::whereDate('Orario_di_partenza', date('Y-m-d'))->get();
         $trainsNumber = Train::count();
 
         $trainsToday = Train::
         select(Train::raw('count(*) as train_count'))
-        ->where('Orario_di_partenza', 'like', '%2023-05-12%')
+        ->whereDate('Orario_di_partenza', date('Y-m-d'))
         ->get();
 
         // dd($trainsToday);
